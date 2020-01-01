@@ -4,12 +4,14 @@
     package="com.levislv.statistics">
 
     <application
+        android:name=".StatisticsApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity android:name=".MainActivity">
@@ -19,5 +21,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".code.CodeActivity" />
+
+        <activity android:name=".fully.FullyActivity" />
+
+        <activity android:name=".fully.navigationbar.view.NavigationBarActivity" />
     </application>
 </manifest>

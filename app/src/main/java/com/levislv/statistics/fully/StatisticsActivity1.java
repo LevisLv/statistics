@@ -1,4 +1,4 @@
-package com.levislv.statistics;
+package com.levislv.statistics.fully;
 
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -15,21 +15,22 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.levislv.statistics.R;
 import com.levislv.statisticssdk.plugin.annotation.StatisticsPage;
 import com.levislv.statisticssdk.plugin.annotation.StatisticsView;
 
 @StatisticsPage(
         type = StatisticsPage.Type.ACTIVITY,
         id = R.layout.activity_statistics,
-        name = "Statistics页",
-        data = "{'a':'b', 'c':'d'}"
+        name = "全埋点页1",
+        data = "{'pageKey0':'pageValue0', 'pageKey01':'pageValue1', 'pageKey02':'pageValue2'}"
 )
 public class StatisticsActivity1 extends AppCompatActivity {
     private void test() {
         new View(this).setOnClickListener(new View.OnClickListener() {
             @StatisticsView(
                     name = "click",
-                    data = "{'e':'f', 'g':'h'}"
+                    data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
             )
             @Override
             public void onClick(View v) {
@@ -39,7 +40,7 @@ public class StatisticsActivity1 extends AppCompatActivity {
         new View(this).setOnLongClickListener(new View.OnLongClickListener() {
             @StatisticsView(
                     name = "longClick",
-                    data = "{'e':'f', 'g':'h'}"
+                    data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
             )
             @Override
             public boolean onLongClick(View v) {
@@ -49,7 +50,7 @@ public class StatisticsActivity1 extends AppCompatActivity {
         new View(this).setOnTouchListener(new View.OnTouchListener() {
             @StatisticsView(
                     name = "touch",
-                    data = "{'e':'f', 'g':'h'}"
+                    data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
             )
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -59,7 +60,7 @@ public class StatisticsActivity1 extends AppCompatActivity {
         new View(this).setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @StatisticsView(
                     name = "focusChange",
-                    data = "{'e':'f', 'g':'h'}"
+                    data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
             )
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
@@ -69,7 +70,7 @@ public class StatisticsActivity1 extends AppCompatActivity {
         new TextView(this).setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @StatisticsView(
                     name = "editorAction",
-                    data = "{'e':'f', 'g':'h'}"
+                    data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
             )
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
@@ -79,7 +80,7 @@ public class StatisticsActivity1 extends AppCompatActivity {
         new CheckBox(this).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @StatisticsView(
                     name = "checkedChanged",
-                    data = "{'e':'f', 'g':'h'}"
+                    data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
             )
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -89,7 +90,7 @@ public class StatisticsActivity1 extends AppCompatActivity {
         new RadioGroup(this).setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @StatisticsView(
                     name = "checkedChanged",
-                    data = "{'e':'f', 'g':'h'}"
+                    data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
             )
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -99,7 +100,7 @@ public class StatisticsActivity1 extends AppCompatActivity {
         new SeekBar(this).setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @StatisticsView(
                     name = "progressChanged",
-                    data = "{'e':'f', 'g':'h'}"
+                    data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
             )
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -108,7 +109,7 @@ public class StatisticsActivity1 extends AppCompatActivity {
 
             @StatisticsView(
                     name = "startTrackingTouch",
-                    data = "{'e':'f', 'g':'h'}"
+                    data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
             )
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
@@ -117,7 +118,7 @@ public class StatisticsActivity1 extends AppCompatActivity {
 
             @StatisticsView(
                     name = "stopTrackingTouch",
-                    data = "{'e':'f', 'g':'h'}"
+                    data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
             )
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
@@ -127,7 +128,7 @@ public class StatisticsActivity1 extends AppCompatActivity {
         new RatingBar(this).setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @StatisticsView(
                     name = "ratingChanged",
-                    data = "{'e':'f', 'g':'h'}"
+                    data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
             )
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
@@ -138,7 +139,7 @@ public class StatisticsActivity1 extends AppCompatActivity {
             @StatisticsView(
                     parentName = "itemClick parent",
                     name = "itemClick",
-                    data = "{'e':'f', 'g':'h'}"
+                    data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
             )
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
@@ -149,7 +150,7 @@ public class StatisticsActivity1 extends AppCompatActivity {
             @StatisticsView(
                     parentName = "itemLongClick parent",
                     name = "itemLongClick",
-                    data = "{'e':'f', 'g':'h'}"
+                    data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
             )
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View v, int position, long id) {
@@ -160,7 +161,7 @@ public class StatisticsActivity1 extends AppCompatActivity {
             @StatisticsView(
                     parentName = "itemSelected parent",
                     name = "itemSelected",
-                    data = "{'e':'f', 'g':'h'}"
+                    data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
             )
             @Override
             public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
@@ -176,7 +177,7 @@ public class StatisticsActivity1 extends AppCompatActivity {
             @StatisticsView(
                     parentName = "groupClick parent",
                     name = "groupClick",
-                    data = "{'e':'f', 'g':'h'}"
+                    data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
             )
             @Override
             public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
@@ -187,7 +188,7 @@ public class StatisticsActivity1 extends AppCompatActivity {
             @StatisticsView(
                     parentName = "childClick parent",
                     name = "childClick",
-                    data = "{'e':'f', 'g':'h'}"
+                    data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
             )
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {

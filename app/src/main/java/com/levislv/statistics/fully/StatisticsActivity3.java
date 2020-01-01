@@ -1,4 +1,4 @@
-package com.levislv.statistics;
+package com.levislv.statistics.fully;
 
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -13,14 +13,15 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.levislv.statistics.R;
 import com.levislv.statisticssdk.plugin.annotation.StatisticsPage;
 import com.levislv.statisticssdk.plugin.annotation.StatisticsView;
 
 @StatisticsPage(
         type = StatisticsPage.Type.ACTIVITY,
         id = R.layout.activity_statistics,
-        name = "Statistics页",
-        data = "{'a':'b', 'c':'d'}"
+        name = "全埋点页3",
+        data = "{'pageKey0':'pageValue0', 'pageKey01':'pageValue1', 'pageKey02':'pageValue2'}"
 )
 public class StatisticsActivity3 extends AppCompatActivity implements
         View.OnClickListener,
@@ -40,7 +41,7 @@ public class StatisticsActivity3 extends AppCompatActivity implements
 
     @StatisticsView(
             name = "click",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @Override
     public void onClick(View v) {
@@ -49,7 +50,7 @@ public class StatisticsActivity3 extends AppCompatActivity implements
 
     @StatisticsView(
             name = "longClick",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @Override
     public boolean onLongClick(View v) {
@@ -58,7 +59,7 @@ public class StatisticsActivity3 extends AppCompatActivity implements
 
     @StatisticsView(
             name = "touch",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @Override
     public boolean onTouch(View v, MotionEvent motionEvent) {
@@ -67,7 +68,7 @@ public class StatisticsActivity3 extends AppCompatActivity implements
 
     @StatisticsView(
             name = "focusChange",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @Override
     public void onFocusChange(View v, boolean hasFocus) {
@@ -76,7 +77,7 @@ public class StatisticsActivity3 extends AppCompatActivity implements
 
     @StatisticsView(
             name = "editorAction",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @Override
     public boolean onEditorAction(TextView v, int actionId, KeyEvent keyEvent) {
@@ -85,7 +86,7 @@ public class StatisticsActivity3 extends AppCompatActivity implements
 
     @StatisticsView(
             name = "checkedChanged",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
@@ -94,7 +95,7 @@ public class StatisticsActivity3 extends AppCompatActivity implements
 
     @StatisticsView(
             name = "checkedChanged",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
@@ -103,7 +104,7 @@ public class StatisticsActivity3 extends AppCompatActivity implements
 
     @StatisticsView(
             name = "progressChanged",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -112,7 +113,7 @@ public class StatisticsActivity3 extends AppCompatActivity implements
 
     @StatisticsView(
             name = "startTrackingTouch",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @Override
     public void onStartTrackingTouch(SeekBar seekBar) {
@@ -121,7 +122,7 @@ public class StatisticsActivity3 extends AppCompatActivity implements
 
     @StatisticsView(
             name = "stopTrackingTouch",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @Override
     public void onStopTrackingTouch(SeekBar seekBar) {
@@ -130,7 +131,7 @@ public class StatisticsActivity3 extends AppCompatActivity implements
 
     @StatisticsView(
             name = "ratingChanged",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @Override
     public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
@@ -140,7 +141,7 @@ public class StatisticsActivity3 extends AppCompatActivity implements
     @StatisticsView(
             parentName = "itemClick parent",
             name = "itemClick",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @Override
     public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
@@ -150,7 +151,7 @@ public class StatisticsActivity3 extends AppCompatActivity implements
     @StatisticsView(
             parentName = "itemLongClick parent",
             name = "itemLongClick",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @Override
     public boolean onItemLongClick(AdapterView<?> parent, View v, int position, long id) {
@@ -160,7 +161,7 @@ public class StatisticsActivity3 extends AppCompatActivity implements
     @StatisticsView(
             parentName = "itemSelectedClick parent",
             name = "itemSelectedClick",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @Override
     public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
@@ -175,7 +176,7 @@ public class StatisticsActivity3 extends AppCompatActivity implements
     @StatisticsView(
             parentName = "groupClick parent",
             name = "groupClick",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @Override
     public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
@@ -185,7 +186,7 @@ public class StatisticsActivity3 extends AppCompatActivity implements
     @StatisticsView(
             parentName = "childClick parent",
             name = "childClick",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @Override
     public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {

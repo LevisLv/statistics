@@ -1,4 +1,4 @@
-package com.levislv.statistics;
+package com.levislv.statistics.fully;
 
 import android.view.View;
 import android.widget.CheckBox;
@@ -10,13 +10,14 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.levislv.statistics.R;
 import com.levislv.statisticssdk.plugin.annotation.StatisticsPage;
 
 @StatisticsPage(
         type = StatisticsPage.Type.ACTIVITY,
         id = R.layout.activity_statistics,
-        name = "Statistics页",
-        data = "{'a':'b', 'c':'d'}"
+        name = "全埋点页2",
+        data = "{'pageKey0':'pageValue0', 'pageKey01':'pageValue1', 'pageKey02':'pageValue2'}"
 )
 public class StatisticsActivity2 extends AppCompatActivity {
     private void test() {

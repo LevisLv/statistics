@@ -1,6 +1,7 @@
 package com.levislv.statistics;
 
 import android.app.Application;
+import android.os.Build;
 
 import com.levislv.statisticssdk.Statistics;
 
@@ -16,6 +17,6 @@ public class StatisticsApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        Statistics.sharedInstance().init(this, "", "");
+        Statistics.init(this, "https://count.ly/", "app_key", Build.DEVICE);
     }
 }

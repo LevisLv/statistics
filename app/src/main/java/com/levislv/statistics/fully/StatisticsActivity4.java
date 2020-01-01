@@ -1,4 +1,4 @@
-package com.levislv.statistics;
+package com.levislv.statistics.fully;
 
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.levislv.statistics.R;
 import com.levislv.statisticssdk.plugin.annotation.StatisticsPage;
 import com.levislv.statisticssdk.plugin.annotation.StatisticsView;
 
@@ -25,13 +26,14 @@ import butterknife.OnTouch;
 @StatisticsPage(
         type = StatisticsPage.Type.ACTIVITY,
         id = R.layout.activity_statistics,
-        name = "Statistics页",
-        data = "{'a':'b', 'c':'d'}"
+        name = "全埋点页4",
+        data = "{'pageKey0':'pageValue0', 'pageKey01':'pageValue1', 'pageKey02':'pageValue2'}"
 )
 public class StatisticsActivity4 extends AppCompatActivity {
+
     @StatisticsView(
             name = "click",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @OnClick(R.id.view)
     void onClick(View v) {
@@ -40,7 +42,7 @@ public class StatisticsActivity4 extends AppCompatActivity {
 
     @StatisticsView(
             name = "longClick",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @OnLongClick(R.id.view)
     boolean onLongClick(View v) {
@@ -49,7 +51,7 @@ public class StatisticsActivity4 extends AppCompatActivity {
 
     @StatisticsView(
             name = "touch",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @OnTouch(R.id.view)
     boolean onTouch(View v, MotionEvent event) {
@@ -58,7 +60,7 @@ public class StatisticsActivity4 extends AppCompatActivity {
 
     @StatisticsView(
             name = "focusChange",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @OnFocusChange(R.id.view)
     void onFocusChange(View v, boolean hasFocus) {
@@ -67,7 +69,7 @@ public class StatisticsActivity4 extends AppCompatActivity {
 
     @StatisticsView(
             name = "editorAction",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @OnEditorAction(R.id.view)
     boolean onEditorAction(TextView view, int actionId, KeyEvent event) {
@@ -76,7 +78,7 @@ public class StatisticsActivity4 extends AppCompatActivity {
 
     @StatisticsView(
             name = "checkedChanged",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @OnCheckedChanged(R.id.view)
     void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -86,7 +88,7 @@ public class StatisticsActivity4 extends AppCompatActivity {
     @StatisticsView(
             parentName = "itemClick parent",
             name = "itemClick",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @OnItemClick(R.id.view)
     void onItemClick(AdapterView<?> parent, View v, int position, long id) {
@@ -96,7 +98,7 @@ public class StatisticsActivity4 extends AppCompatActivity {
     @StatisticsView(
             parentName = "itemLongClick parent",
             name = "itemLongClick",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @OnItemLongClick(R.id.view)
     boolean onItemLongClick(AdapterView<?> parent, View v, int position, long id) {
@@ -106,7 +108,7 @@ public class StatisticsActivity4 extends AppCompatActivity {
     @StatisticsView(
             parentName = "itemSelected parent",
             name = "itemSelected",
-            data = "{'e':'f', 'g':'h'}"
+            data = "{'key0':'value0', 'key1':'value1', 'key2':'value2'}"
     )
     @OnItemSelected(value = R.id.view, callback = OnItemSelected.Callback.ITEM_SELECTED)
     void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
